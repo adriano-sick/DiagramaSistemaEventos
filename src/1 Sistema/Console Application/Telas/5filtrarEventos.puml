@@ -1,0 +1,15 @@
+@startuml Console Application - Filtrar Eventos
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+Container(fe, "Filtrar Eventos", "CLI", "Tela de pesquisa de Eventos")
+Component(fp, "Presenca", "Campo Presenca")
+Component(fd, "Data", "Campo Data")
+Container(le, "Listagem de Eventos", "CLI", "Tela para exibir eventos filtrados.")
+
+Rel(fe, fp, "Campo", "Requere entrada de dado")
+Rel(fe, fd, "Campo", "Requere entrada de dado")
+
+Rel(fn, le, "Lista", "Lista de acordo com o termo buscado")
+Rel(fd, le, "Campo", "Lista de acordo com o termo buscado")
+
+@enduml

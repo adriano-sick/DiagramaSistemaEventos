@@ -1,0 +1,15 @@
+@startuml Console Application - Welcome Screen
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+Container(wcs, "Welcome Screen", "CLI", "Tela com menu inicial.")
+Component(mcu, "Cadastro Usuario", "Acessa tela Cadastro Usuario")
+Component(mce, "Cadastro Evento", "Acessa tela Cadastro Evento")
+Component(mfe, "Filtrar eventos", "Acessa tela Filtro de Eventos")
+Component(mte, "Todos os Eventos", "Acessa tela Todos os Eventos")
+
+Rel(wcs, mcu, "Opcao", "Exibe no menu")
+Rel(wcs, mce, "Opcao", "Exibe no menu")
+Rel(wcs, mfe, "Opcao", "Exibe no menu")
+Rel(wcs, mte, "Opcao", "Exibe no menu")
+
+@enduml

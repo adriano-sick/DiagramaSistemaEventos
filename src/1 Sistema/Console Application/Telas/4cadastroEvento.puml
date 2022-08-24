@@ -1,0 +1,19 @@
+@startuml Console Application - Cadastro Evento
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+Container(ce, "Cadastro Evento", "CLI", "Tela de Cadastro de Evento")
+Component(en, "Nome", "Campo Nome")
+Component(eda, "Data", "Campo Data/horario")
+Component(el, "Endereco", "Campo Endereco")
+Component(ec, "Categoria", "Campo Categoria")
+Component(ed, "Descricao", "Campo Descricao Evento")
+Component(ep, "Presenca", "Campo Presenca")
+
+Rel(ce, en, "Campo", "Requere entrada de dado")
+Rel(ce, eda, "Campo", "Requere entrada de dado")
+Rel(ce, el, "Campo", "Requere entrada de dado")
+Rel(ce, ec, "Campo", "Requere entrada de dado")
+Rel(ce, ed, "Campo", "Requere entrada de dado")
+Rel(ce, ep, "Campo", "Requere entrada de dado")
+
+@enduml

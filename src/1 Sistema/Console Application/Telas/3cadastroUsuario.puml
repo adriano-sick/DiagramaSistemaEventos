@@ -1,0 +1,13 @@
+@startuml Console Application - Cadastro Usuario
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+Container(cu, "Cadastro Usuario", "CLI", "Tela de Cadastro do Usuario")
+Component(un, "Nome", "Campo Nome")
+Component(ud, "Data de Nascimento", "Campo Data de Nascimento")
+Component(uc, "Cidade", "Campo Cidade")
+
+Rel(cu, un, "Campo", "Requere entrada de dado")
+Rel(cu, ud, "Campo", "Requere entrada de dado")
+Rel(cu, uc, "Campo", "Requere entrada de dado")
+
+@enduml

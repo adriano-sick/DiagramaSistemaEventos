@@ -1,0 +1,17 @@
+@startuml Console Application - Telas
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+Container(wcs, "Welcome Screen", "CLI", "Tela com menu inicial.")
+Container(cu, "Cadastro de Usuario", "CLI", "Tela para cadastro de novos usuarios.")
+Container(ce, "Cadastro de Eventos", "CLI", "Tela para cadastrar novos eventos.")
+Container(te, "Todos os Eventos", "CLI", "Tela para exibir todos os estudos.")
+Container(fe, "Filtro de Eventos", "CLI", "Tela para selecionar filtros.")
+Container(le, "Listagem de Eventos", "CLI", "Tela para exibir eventos filtrados.")
+
+Rel(wcs, cu, "Acessa", "Exibe no menu")
+Rel(wcs, ce, "Acessa", "Exibe no menu")
+Rel(wcs, fe, "Acessa", "Exibe no menu")
+Rel(wcs, te, "Acessa", "Exibe no menu")
+
+Rel(fe, le, "Acessa", "Apos selecionar filtro")
+@enduml
